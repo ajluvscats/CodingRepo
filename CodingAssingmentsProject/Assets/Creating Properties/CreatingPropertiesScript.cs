@@ -1,18 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class CreatingPropertiesScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private int experience;
+
+   
+    public int Experience
     {
-        
+        get
+        {
+            
+            return experience;
+        }
+        set
+        {
+            
+            experience = value;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public int Level
     {
-        
+        get
+        {
+            return experience / 1000;
+        }
+        set
+        {
+            experience = value * 1000;
+        }
     }
+
+    
+    public int Health { get; set; }
 }
+
